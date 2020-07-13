@@ -47,7 +47,7 @@ int main(int argc, char* argv[]){
     while ((read = getline(&line, &len, fp)) != -1) {
         line_count++;
     }
-
+    line_count--;
     if(mood == MOOD_RANDOM){
         mood = isEven(get_current_time_with_ns(&read)) ? 1 : 0;
     }
