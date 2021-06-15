@@ -63,7 +63,7 @@ int main(int argc, char* argv[]){
     }
 
     line_count = 0;
-    line = memset(&line, 0, sizeof(line));
+    line = 0; //memset(&line, 0, sizeof(line));
     len = 0;
 
     fclose(fp);
@@ -94,8 +94,5 @@ long* get_current_time_with_ns (long* l){
     return l;
 }
 int isEven(long* number){
-    if(*number %2 == 0)
-        return 1;
-    else
-        return 0;
+    return *number % 2 ? 1 : 0;
 }
